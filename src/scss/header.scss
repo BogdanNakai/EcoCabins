@@ -1,0 +1,54 @@
+.header {
+	background-color: var(--primary);
+
+	&__container {}
+
+	&__body {
+		display: flex;
+		align-items: center;
+	}
+
+	&__logo {
+		flex: 1 1 auto;
+	}
+
+	&__logo-img {}
+
+	&__menu {}
+
+	&__box-button {}
+
+	&__button {}
+}
+
+.menu {
+	display: flex;
+	&__icon {}
+
+	&__body {
+
+	}
+
+	&__list {
+		display: flex;
+		@include adaptiveValue("gap", 10, 8);
+		align-items: center;
+		flex-wrap: wrap;
+	}
+
+	&__item {
+	}
+
+	&__link {
+		display: block;
+		font-weight: 500;
+		@include adaptiveValue("font-size", 12, 10);
+		text-align: center;
+		color: var(--accent);
+
+		padding: toRem(10);
+	}
+}
+
+.icon-menu {}
+

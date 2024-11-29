@@ -1,1 +1,14 @@
 // Заголовки, загальні БЕМ блоки та інше...
+.buttom {
+	color: #606b74;
+	@include adaptiveValue("font-size", 12, 10);
+
+	width: toRem(90);
+	height: toRem(34);
+	background: var(--bg-accent);
+	border-radius: toRem(4);
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}

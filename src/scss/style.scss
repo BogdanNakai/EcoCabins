@@ -22,7 +22,7 @@ $fontFamily: "Rubik";
 $fontSize: toRem(14); // де 14(px) - розмір шрифту за замовчуванням з макету
 
 // Основні кольори
-$mainColor: --text-primary; // Колір шрифту за замовчуванням
+$mainColor: var(--text-primary); // Колір шрифту за замовчуванням
 
 // Палітра кольорів
  @import "base/colors-palette";
@@ -32,9 +32,9 @@ $mainColor: --text-primary; // Колір шрифту за замовчуван
 // Мінімальна ширина сторінки
 $minWidth: 320;
 // Ширина полотна (макету)
-$maxWidth: 1920;
+$maxWidth: 1000;
 // Ширина обмежуючого контейнера (0 = немає обмеження)
-$maxWidthContainer: 1170;
+$maxWidthContainer: 800;
 // Загальний відступ у контейнера
 // (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
 $containerPadding: 30;
