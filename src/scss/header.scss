@@ -65,6 +65,8 @@
 	&__body {}
 
 	&__list {
+		position: relative;
+		z-index: 4;
 		display: flex;
 		@include adaptiveValue("gap", 10, 8);
 		align-items: center;
