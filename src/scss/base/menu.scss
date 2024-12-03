@@ -13,25 +13,28 @@
 			top: -150%;
 			overflow: auto;
 			padding: toRem(70) toRem(15) toRem(15) toRem(30);
-			transition: top 0.3s;
+			transition: top 0.3s ease 0.0s;
 			background: var(--secondary);
 
 			&::before {
 				content: "";
 				position: fixed;
 				width: 100%;
-				height: toRem(70);
+				height: toRem(54);
 				left: 0;
 				top: -150%;
-				transition: left 0.3s;
-				z-index: 2;
+				transition: top 0.3s ease 0.1s;
+				z-index: 5;
+				background-color: var(--primary);
 			}
 
 			.menu-open & {
 				top: 0;
+				transition: top 0.3s ease 0.1s;
 
 				&::before {
 					top: 0;
+					transition: top 0.3s ease 0.0s;
 				}
 			}
 		}

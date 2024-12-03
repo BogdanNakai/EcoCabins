@@ -17,17 +17,6 @@
 		top: 0;
 	}
 
-/* 	&::before {
-		content: '';
-		position: absolute;
-		z-index: 3;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background-color: var(--primary);
-	} */
-
 	&__container {}
 
 	&__body {
@@ -39,7 +28,7 @@
 	&__logo {
 		flex: 1 1 auto;
 		position: relative;
-		z-index: 3;
+		z-index: 5;
 
 		@media (max-width:$mobileSmall) {
 			order: 1;
@@ -55,7 +44,7 @@
 
 	&__box-button {
 		position: relative;
-		z-index: 3;
+		z-index: 5;
 
 		@media (max-width:$mobile) {
 			padding-right: toRem(20);
