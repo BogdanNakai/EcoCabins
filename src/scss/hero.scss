@@ -1,0 +1,49 @@
+.hero {
+	position: relative;
+	aspect-ratio: 1000 / 600;
+	&__container {
+		height: 100%;
+	}
+
+	&__body {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: 100%;
+	}
+
+	&__info {
+		position: relative;
+		z-index: 2;
+	}
+
+	&__sub-title {}
+
+	&__title {}
+`
+	&__button-film {}
+
+	&__cover-image {
+		position: absolute;
+		z-index: 1;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		&::before {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			opacity: 0.25;
+			display: block;
+			background-color: #fff;
+		}
+	}
+
+	&__image {
+		aspect-ratio: 1000 / 600;
+	}
+}
+
+.ibg {}
