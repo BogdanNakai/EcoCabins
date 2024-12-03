@@ -1,12 +1,23 @@
 .article {
+	position: relative;
+	z-index: 4;
+	display: flex;
+	flex-direction: row-reverse;
+	margin-top: toRem(-37);
+	&__container {
+		flex: 1 0 auto;
+	}
 
-	&__container {}
-
-	&__body {}
+	&__body {
+		display: flex;
+	}
 
 	&__card {}
 
-	&__pictures {}
+	&__pictures {
+		width: toRem(325);
+		margin-top: toRem(-76);
+	}
 
 	&__slider {}
 
@@ -16,20 +27,37 @@
 }
 
 .cart-article {
-	margin-top: toRem(-37);
-	position: relative;
-	z-index: 4;
-
-	display: flex;
-	flex-direction: column;
-	align-items: start;
-	justify-content: center;
-	@include adaptiveValue("gap", 13, 10);
+	flex: 0 1 60%;
 	
-	max-width: toRem(400);
+	@include adaptiveValue("padding-right", 116, 50);
 	min-height: toRem(400);
 	width: toRem(616);
 	background-color: #fff;
+
+	position: relative;
+	
+	&::before{
+		content:'';
+		display: block;
+		position: absolute;
+		height: 100%;
+		width: 900%;
+		top: 0;
+		left: -900%;
+		background-color: #ffffff;
+	}
+
+	&__info {
+		position: relative;
+		z-index: 4;
+		padding: toRem(62) 0;
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+		justify-content: center;
+		@include adaptiveValue("gap", 13, 10);
+		max-width: toRem(400);
+	}
 
 	&__title {
 		font-weight: 900;
@@ -62,10 +90,36 @@
 	}
 }
 
-/* .swiper {
+.swiper {
+	position: relative;
+	display: flex;
+	justify-content: center;
 }
 .swiper-wrapper {
 }
 .swiper-slide {
 }
- */
+
+
+ 
+
+.swiper-pagination {
+	position: absolute;
+	bottom: toRem(10);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: toRem(8);
+}
+.swiper-pagination-bullet {
+	display: block;
+	width: toRem(9);
+	height: toRem(9);
+	border-radius: 50%;
+	background-color: #fff;
+	opacity: 0.4;
+}
+
+.swiper-pagination-bullet-active {
+	opacity: 1;
+}
