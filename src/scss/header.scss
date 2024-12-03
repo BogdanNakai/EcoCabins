@@ -1,8 +1,9 @@
 .header {
 	padding: toRem(10) 0;
 	position: relative;
-	&::before{
-		content:'';
+
+	&::before {
+		content: '';
 		position: absolute;
 		z-index: 3;
 		top: 0;
@@ -12,6 +13,7 @@
 		background-color: var(--primary);
 
 	}
+
 	&__container {}
 
 	&__body {
@@ -30,23 +32,41 @@
 		}
 	}
 
-	&__logo-img {}
+	&__logo-img {
+		display: inline-block;
+		width: auto;
+	}
 
 	&__menu {}
 
 	&__box-button {
 		position: relative;
 		z-index: 3;
+
 		@media (max-width:$mobile) {
 			padding-right: toRem(20);
 			order: 2;
 		}
-		@media (max-width:$mobileSmall){
-			 padding-right: 0; 
+
+		@media (max-width: toEm(480)) {
+			padding-right: 0;
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
 		}
+
 	}
 
-	&__button {}
+	&__button {
+		font-size: toRem(12);
+		@media (max-width: toEm(480)) {
+			width: 50%;
+			min-width: 30%;
+			font-size: toRem(16);
+			height: toRem(40);
+		}
+	}
 }
 
 .menu {
@@ -83,6 +103,11 @@
 		color: var(--accent);
 
 		padding: toRem(10);
+
+		@media (max-width:$mobile) {
+			font-size: toRem(20);
+			padding: toRem(15) toRem(10);
+		}
 	}
 }
 
