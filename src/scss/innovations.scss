@@ -1,19 +1,22 @@
 .innovations {
 	background-color: var(--bg-secondary);
-	@include adaptiveValue("padding-top", 278, 70);
+	@include adaptiveValue("padding-top", 211, 170, 0, 1000, 590);
 	@include adaptiveValue("padding-bottom", 78, 30);
 	margin-top: toRem(-138);
+
 	&__container {}
 
-	&__body {
-
-	}
+	&__body {}
 
 	&__content {}
 
 	&__title {
 		color: var(--accent);
 		@include adaptiveValue("padding-bottom", 8, 5);
+
+		@media (max-width: toEm(590)) {
+			text-align: center;
+		}
 	}
 
 	&__text {
@@ -21,9 +24,14 @@
 		@include adaptiveValue("font-size", 14, 12);
 		line-height: 1.71429;
 		color: var(--accent);
+		opacity: 0.7;
 
 		column-width: toRem(200);
 		column-count: 2;
 		@include adaptiveValue("column-gap", 43, 20);
+
+		@media (max-width: toEm(590)) {
+			text-align: center;
+		}
 	}
 }
