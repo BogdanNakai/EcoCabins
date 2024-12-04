@@ -1,0 +1,29 @@
+.innovations {
+	background-color: var(--bg-secondary);
+	@include adaptiveValue("padding-top", 278, 70);
+	@include adaptiveValue("padding-bottom", 78, 30);
+	margin-top: toRem(-138);
+	&__container {}
+
+	&__body {
+
+	}
+
+	&__content {}
+
+	&__title {
+		color: var(--accent);
+		@include adaptiveValue("padding-bottom", 8, 5);
+	}
+
+	&__text {
+		font-weight: 400;
+		@include adaptiveValue("font-size", 14, 12);
+		line-height: 1.71429;
+		color: var(--accent);
+
+		column-width: toRem(200);
+		column-count: 2;
+		@include adaptiveValue("column-gap", 43, 20);
+	}
+}

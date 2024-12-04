@@ -111,8 +111,6 @@
 	}
 
 	&__title {
-		font-weight: 900;
-		@include adaptiveValue("font-size", 30, 22);
 		color: #222f33;
 	}
 
