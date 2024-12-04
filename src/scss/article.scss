@@ -22,9 +22,9 @@
 		}
 	}
 
-	&__card {}
-
 	&__pictures {
+		position: relative;
+		z-index: 4;
 		width: toRem(325);
 		height: toRem(366);
 		margin-top: toRem(-39);
@@ -33,27 +33,23 @@
 		@media (max-width: toEm(880)) {
 			width: toRem(280);
 			height: toRem(321);
-			margin-left: 0;
+			margin-left: toRem(-30);
 		}
 
 		@media (max-width: toEm(720)) {
 			margin-top: toRem(-30);
+			margin-left: toRem(-20);
 			width: toRem(250);
 			height: toRem(276);
 		}
 
 		@media (max-width: toEm(590)) {
 			margin-top: 0;
+			margin-left: 0;
 			width: toRem(220);
 			height: auto;
 		}
 	}
-
-	&__slider {}
-
-	&__wrapper {}
-
-	&__slide {}
 }
 
 .cart-article {
@@ -61,12 +57,7 @@
 	@include adaptiveValue("padding-right", 116, 50, 0, 1000, 880);
 	background-color: #fff;
 
-	@media (max-width: toEm(840)) {
-		padding-right: toRem(20);
-	}
-
 	@media (max-width: toEm(590)) {
-		min-height: auto;
 		padding-right: 0;
 	}
 
