@@ -1,0 +1,41 @@
+.benefits {
+	@include adaptiveValue("padding-top", 62, 40);
+	@include adaptiveValue("padding-bottom", 62, 40);
+
+	&__container {
+	}
+
+	&__body {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		@include adaptiveValue("gap", 53, 10);
+	}
+
+	&__pictures {
+		flex: 1 1 44%;
+		height: toRem(363);
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__list {
+	}
+
+	&__card {
+	}
+
+	&__tilte {
+		color: var(--primary);
+		@include adaptiveValue("font-size", 18, 14);
+		@include adaptiveValue("padding-bottom", 10, 8);
+	}
+
+	&__text {
+		font-size: toRem(12);
+		line-height: math.div(24 ,12);
+	}
+}
