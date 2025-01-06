@@ -47,15 +47,21 @@ body::after {
 	align-items: center;
 }
 .popup__content {
+	display: flex;
+	align-items: end;
+	flex-direction: column;
 	visibility: hidden;
 	transform: scale(0);
 	transition: transform 0.3s ease 0s;
-	background-color: #eee;
-	padding: 20px;
 	width: 100%;
 	max-width: 900px;
 	border-radius: 20px;
 	.lock & {
 		visibility: visible;
 	}
+}
+
+.popup__close {
+	padding: 10px;
+	margin-right: 5px;
 }

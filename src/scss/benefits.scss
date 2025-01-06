@@ -8,15 +8,15 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		@include adaptiveValue("gap", 53, 10, 0, 1000, 786);
+		@include adaptiveValue("gap", 55, 5, 0, 1000, 800);
 
-		@media (max-width: toEm(700)) {
+		@media (max-width: toEm(768)) {
 			flex-wrap: wrap;
 		}
 	}
 
 	&__pictures {
-		flex: 1 1 44%;
+		flex: 1 0 44.3%;
 		height: toRem(363);
 
 		img {
@@ -25,40 +25,47 @@
 			object-fit: cover;
 		}
 
-		@media (max-width: toEm(900)) {
-			height: auto;
-		}
-
-		@media (max-width: toEm(700)) {
-			flex: 0 1 50%;
+		@media (max-width: toEm(768)) {
+			flex: 0 1 60%;
 			height: toRem(350);
 			padding-bottom: toRem(25);
 		}
 
 		@media (max-width: toEm(560)) {
 			height: auto;
-			flex: 0 1 60%;
+			flex: 0 1 65%;
+		}
+
+		@media (max-width: toEm(425)) {
+			height: auto;
+			flex: 0 1 70%;
 		}
 	}
 
 	&__list {
+		flex: 1 0 50%;
 		padding: toRem(20);
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(toRem(170), auto));
+		grid-template-columns: repeat(2, toRem(170));
 		@include adaptiveValue("gap", 20, 18, 0, 1000, 425);
-		align-items: center;
+		align-items: start;
 
-		@media (max-width: toEm(700)){
+		@media (max-width: toEm(768)){
 			row-gap: toRem(20);
 			column-gap: toRem(15);
+			flex: 0 1 50%;
 		}
 		@media (max-width: toEm(425)){
 			row-gap: toRem(30);
-			grid-template-columns: repeat(auto-fill, minmax(toRem(170), toRem(250)));
+			flex: 0 1 auto;
+			grid-template-columns: repeat(1, 1fr);
+			justify-items: center;
 		}
 	}
 
-	&__card {}
+	&__card {
+		max-width: toRem(170);
+	}
 
 	&__tilte {
 		color: var(--primary);

@@ -17,7 +17,7 @@ export function rangeInit() {
 			connect: [true, false],
 			range: {
 				'min': [0],
-				'max': [200000]
+				'max': [100]
 			},
 			/*
 			format: wNumb({

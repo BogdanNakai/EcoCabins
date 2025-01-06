@@ -69,6 +69,7 @@
 .noUi-touch-area {
 	height: 100%;
 	width: 100%;
+	border-radius: 100%;
 }
 .noUi-state-tap .noUi-connect,
 .noUi-state-tap .noUi-origin {
@@ -83,10 +84,11 @@
 	height: 18px;
 }
 .noUi-horizontal .noUi-handle {
-	width: 34px;
-	height: 28px;
+	width: 25px !important;
+	height: 25px !important;
 	right: -17px;
-	top: -6px;
+	top: -4.5px !important;
+	border-radius: 50% !important;
 }
 .noUi-vertical {
 	width: 18px;
@@ -114,7 +116,7 @@
 	border-radius: 3px;
 }
 .noUi-connect {
-	background: #3fb8af;
+	background: #30454b !important;
 }
 /* Handles and cursors;
  */
@@ -125,31 +127,36 @@
 	cursor: ns-resize;
 }
 .noUi-handle {
+	display: flex !important;
+	align-items: center !important;
+	justify-content: center !important;
 	border: 1px solid #d9d9d9;
 	border-radius: 3px;
 	background: #fff;
 	cursor: default;
-	box-shadow: inset 0 0 1px #fff, inset 0 1px 7px #ebebeb, 0 3px 6px -3px #bbb;
+	box-shadow: none !important;
 }
 .noUi-active {
-	box-shadow: inset 0 0 1px #fff, inset 0 1px 7px #ddd, 0 3px 6px -3px #bbb;
+	box-shadow: none !important;
 }
 /* Handle stripes;
  */
-.noUi-handle:before,
-.noUi-handle:after {
+.noUi-handle:before {
 	content: "";
 	display: block;
 	position: absolute;
-	height: 14px;
-	width: 1px;
-	background: #e8e7e6;
-	left: 14px;
-	top: 6px;
+	height: 8px !important;
+	width: 8px !important;
+	border-radius: 100% !important;
+	background: #222F33 !important;
+	left: auto !important;
+	top: auto !important;
 }
-.noUi-handle:after {
-	left: 17px;
+
+.noUi-handle::after {
+	display: none !important;
 }
+
 .noUi-vertical .noUi-handle:before,
 .noUi-vertical .noUi-handle:after {
 	width: 14px;
